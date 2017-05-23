@@ -1,6 +1,7 @@
 const INIT_STATE = {
     isFieldValid: false,
     isFieldFocused: false,
+    isFieldPristine: true,
     validVatNumberInputted: null
 };
 
@@ -10,6 +11,7 @@ function reducer (state = INIT_STATE, action) {
             return {
                 ...state,
                 isFieldFocused: true,
+                isFieldPristine: false,
             };
 
         case 'FORM_FIELD_BLURRED':

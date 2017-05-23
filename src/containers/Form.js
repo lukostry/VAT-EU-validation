@@ -21,7 +21,7 @@ class Form extends Component {
     }
 
     render () {
-        const { focusFormField, isFieldValid, isFieldFocused } = this.props;
+        const { focusFormField, isFieldValid, isFieldFocused, isFieldPristine } = this.props;
 
         return (
             <div className="app-container">
@@ -32,6 +32,7 @@ class Form extends Component {
                     </div>
                     <input
                         type="text"
+                        className={!isFieldValid && !isFieldPristine ? 'invalid-field' : null}
                         onBlur={(e) => this.handleBlur(e)}
                         onFocus={() => focusFormField()}
                     />
@@ -45,6 +46,7 @@ class Form extends Component {
 }
 
 const mapStateToProps = state => ({
+    isFieldPristine: state.isFieldPristine,
     isFieldValid: state.isFieldValid,
     isFieldFocused: state.isFieldFocused,
     validVatNumberInputted: state.validVatNumberInputted,
