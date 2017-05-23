@@ -11,7 +11,6 @@ export const blurFormField = () => ({
 });
 
 export const performValidationCheck = vatNumber => dispatch => {
-    console.log('validation check');
     if (vatNumber.lenght < MINIMUM_VAT_EU_LENGTH) {
         dispatch({
             type: 'FORM_FIELD_INVALIDATED',
