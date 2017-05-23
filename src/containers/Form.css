@@ -1,0 +1,39 @@
+.app-container {
+    background-color: #f0f4f5;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQYV2M8c+bMfxMTE0YGLACrIEzdoJMEACOwBAhkhLFGAAAAAElFTkSuQmCC");
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    outline: 0;
+    padding-top: 2rem;
+}
+
+.input-caption {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 5px;
+}
+
+.focused-field {
+    color: #1a9ce1;
+}
+
+.required-field {
+    color: #d0021b;
+}
+
+.app-container input {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.05);
+    height: 35px;
+    margin: 5px 0;
+    outline: 0;
+    padding: 7px 10px;
+    width: 200px;
+}
+
+.error-message {
+    color: #d0021b;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+}
