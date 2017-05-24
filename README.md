@@ -6,6 +6,10 @@
 - Redux (+ redux-logger, redux-thunk)
 - isomorphic-fetch
 
+To install dependecies run:
+
+### `npm install`
+
 In the project directory, you can run:
 
 ### `npm start`
