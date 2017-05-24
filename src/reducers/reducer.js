@@ -2,7 +2,7 @@ const INIT_STATE = {
     isFieldValid: false,
     isFieldFocused: false,
     isFieldPristine: true,
-    validVatNumberInputted: null
+    vatNumberInputted: null
 };
 
 function reducer (state = INIT_STATE, action) {
@@ -24,14 +24,14 @@ function reducer (state = INIT_STATE, action) {
             return {
                 ...state,
                 isFieldValid: true,
-                validVatNumberInputted: action.payload,
+                vatNumberInputted: action.payload,
             };
 
         case 'FORM_FIELD_INVALIDATED':
             return {
                 ...state,
                 isFieldValid: false,
-                validVatNumberInputted: null,
+                vatNumberInputted: action.payload,
             };
 
         default:

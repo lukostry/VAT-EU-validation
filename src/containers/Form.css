@@ -35,6 +35,7 @@
 .invalid-field {
     border: 1px solid #d0021b;
     color: #d0021b;
+    font-weight: bolder;
 }
 
 .error-message {

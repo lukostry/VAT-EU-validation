@@ -9,13 +9,13 @@ class Form extends Component {
         this.props.blurFormField();
 
         const currentQuery = e.currentTarget.value;
-        const { performValidationCheck, validVatNumberInputted } = this.props;
+        const { performValidationCheck, vatNumberInputted } = this.props;
 
-        if (!validVatNumberInputted) {
+        if (!vatNumberInputted) {
             return performValidationCheck(currentQuery);
         }
 
-        if (currentQuery !== validVatNumberInputted) {
+        if (currentQuery !== vatNumberInputted) {
             return performValidationCheck(currentQuery);
         }
     }
@@ -49,7 +49,7 @@ const mapStateToProps = state => ({
     isFieldPristine: state.isFieldPristine,
     isFieldValid: state.isFieldValid,
     isFieldFocused: state.isFieldFocused,
-    validVatNumberInputted: state.validVatNumberInputted,
+    vatNumberInputted: state.vatNumberInputted,
 });
 
 export default connect(mapStateToProps, actions)(Form);
